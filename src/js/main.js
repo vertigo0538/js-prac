@@ -1,5 +1,13 @@
-import { add } from "./util";
+import { pick } from "./restParameter";
+import { spreadOperator } from "./spreadOperator";
 
-let test = add(2, 3);
+let book = {
+  title: "test",
+  author: "khk",
+  year: 2020,
+};
+let bookData = pick(book, "author", "title");
+console.log(bookData.author);
 
-console.log(test);
+// spreadOperator
+spreadOperator();

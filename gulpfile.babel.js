@@ -8,7 +8,7 @@ import autoprefixed from "gulp-autoprefixer";
 import miniCSS from "gulp-csso";
 import bro from "gulp-bro";
 import babelify from "babelify";
-import ghPages from "gulp-gh-pages";
+// import ghPages from "gulp-gh-pages";
 
 sass.compiler = require("node-sass");
 
@@ -80,7 +80,7 @@ const devServer = () =>
     })
   );
 
-const githubDeploy = () => gulp.src("build/**/*").pipe(ghPages());
+// const githubDeploy = () => gulp.src("build/**/*").pipe(ghPages());
 const prepare = gulp.series([clean, img]);
 
 const assets = gulp.series([pug, styles, js]);
@@ -93,4 +93,4 @@ export const build = gulp.series([prepare, assets]);
 
 export const dev = gulp.series([build, devServerStart]);
 
-export const deploy = gulp.series([build, githubDeploy, clean]);
+export const deploy = gulp.series([build, clean]);
