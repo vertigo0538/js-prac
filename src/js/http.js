@@ -1,11 +1,10 @@
 import axios from "axios";
 
-export const posts = () => {
+export const posts = async () => {
   console.log("Fetching data...");
-  return axios
-    .get("https://jsonplaceholder.typicode.com/todos/2")
-    .then((response) => {
-      return response.data;
-    });
+  const response = await axios.get(
+    "https://jsonplaceholder.typicode.com/todos/2"
+  );
+  return response.data;
 };
 // export const posts = axios.get(url).then((response) => response.data);
