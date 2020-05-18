@@ -1,9 +1,8 @@
 import { posts } from "./http";
 
 // promise
-test("promise test ", () => {
+test("promise test ", async () => {
   expect.assertions(1);
-  return posts().then((data) => {
-    expect(data.content).toEqual("test");
-  });
+  const { data } = await posts();
+  expect(data.content).toEqual("test");
 });

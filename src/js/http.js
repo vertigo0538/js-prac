@@ -5,6 +5,6 @@ export const posts = async () => {
   const response = await axios.get(
     "https://jsonplaceholder.typicode.com/todos/2"
   );
-  return response.data;
+  return response;
 };
 // export const posts = axios.get(url).then((response) => response.data);
