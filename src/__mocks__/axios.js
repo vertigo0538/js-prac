@@ -1,7 +1,11 @@
-const get = (url) => {
-  return Promise.resolve({
-    data: { id: 3, title: "delectus aut autem", content: "test" },
-  });
+export default {
+  get: jest.fn(() =>
+    Promise.resolve({
+      data: {
+        id: 1,
+        title: "hello, world",
+        content: "test",
+      },
+    })
+  ),
 };
-
-exports.get = get;
