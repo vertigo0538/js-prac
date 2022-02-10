@@ -24,7 +24,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-webserver": "^0.9.1",
     "jest": "^26.0.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "uglifyify": "^5.0.2"
   },
   "scripts": {
